@@ -1,4 +1,4 @@
-package br.ufma.ecp.lox;
+package br.ufma.ecp.jlox.lox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
