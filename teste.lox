@@ -29,3 +29,8 @@ while (i < 10) {
     print i;
     i = i + 1;
 }
+
+for (var a = 0; a < 20; a = a  + 2) {
+    print a;
+}
+print a;
