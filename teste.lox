@@ -17,3 +17,9 @@ var c = "global c";
 print a;
 print b;
 print c;
+c = false;
+if (c) {
+    print "ok";
+} else {
+    print "deuruim";
+}
