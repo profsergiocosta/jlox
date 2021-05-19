@@ -22,8 +22,28 @@ class Interpreter implements Expr.Visitor<Object>,
         stmt.accept(this);
     }
 
+    @Override
+    public Void visitBlockStmt(Stmt.Block stmt) {
+        executeBlock(stmt.statements, new Environment(environment));
+        return null;
+    }
 
-    private String stringify(Object object) {
+    void executeBlock(List<Stmt> statements,
+                      Environment environment) {
+        Environment previous = this.environment;
+        try {
+            this.environment = environment;
+
+            for (Stmt statement : statements) {
+                execute(statement);
+            }
+        } finally {
+            this.environment = previous;
+        }
+
+    }
+
+        private String stringify(Object object) {
         if (object == null) return "nil";
 
         if (object instanceof Double) {
