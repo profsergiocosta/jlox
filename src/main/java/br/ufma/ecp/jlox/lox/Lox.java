@@ -84,8 +84,6 @@ public class Lox {
             runFile(args[0]);
         } else {
             runPrompt();
-
-
         }
     }
 }
