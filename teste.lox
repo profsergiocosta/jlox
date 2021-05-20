@@ -79,4 +79,16 @@ var a = "global";
   showA();
 }
 
-return 10;
+class DevonshireCream {
+  serveOn() {
+    return "Scones";
+  }
+}
+
+print DevonshireCream; // Prints "DevonshireCream".
+
+class Bagel {}
+var bagel = Bagel();
+print bagel; // Prints "Bagel instance".
+bagel.foo = 10;
+print bagel.foo;
