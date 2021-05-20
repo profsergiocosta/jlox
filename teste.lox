@@ -52,5 +52,14 @@ fun fat (x) {
         return x * fat (x-1);
 }
 
+fun f(y) {
+    fun g (x) {
+        return x + y;
+    }
+    return g;
+}
+
 print dobro(4);
 print fat(5);
+
+print f(2)(4);
