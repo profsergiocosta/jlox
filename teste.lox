@@ -40,3 +40,17 @@ fun sayHi(first, last) {
 }
 
 sayHi("Dear", "Reader");
+
+fun dobro (x) {
+    return 2 * x;
+}
+
+fun fat (x) {
+    if (x == 0)
+        return 1;
+    else
+        return x * fat (x-1);
+}
+
+print dobro(4);
+print fat(5);
