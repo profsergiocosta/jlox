@@ -42,6 +42,9 @@ fun sayHi(first, last) {
 sayHi("Dear", "Reader");
 
 fun dobro (x) {
+
+    var a = 10;
+    a = 20;
     return 2 * x;
 }
 
@@ -61,5 +64,19 @@ fun f(y) {
 
 print dobro(4);
 print fat(5);
+print dobro;
 
 print f(2)(4);
+
+var a = "global";
+{
+  fun showA() {
+    print a;
+  }
+
+  showA();
+  var a = "block";
+  showA();
+}
+
+return 10;
