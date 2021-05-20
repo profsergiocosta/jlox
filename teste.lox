@@ -92,3 +92,11 @@ var bagel = Bagel();
 print bagel; // Prints "Bagel instance".
 bagel.foo = 10;
 print bagel.foo;
+
+class Bacon {
+  eat() {
+    print "Crunch crunch crunch!";
+  }
+}
+
+Bacon().eat(); // Prints "Crunch crunch crunch!".
