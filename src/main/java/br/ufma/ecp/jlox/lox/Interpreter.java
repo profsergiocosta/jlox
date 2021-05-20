@@ -221,6 +221,11 @@ class Interpreter implements Expr.Visitor<Object>,
     }
 
     @Override
+    public Object visitThisExpr(Expr.This expr) {
+        return lookUpVariable(expr.keyword, expr);
+    }
+
+    @Override
     public Object visitVariableExpr(Expr.Variable expr) {
         //return environment.get(expr.name);
         return lookUpVariable(expr.name, expr);
